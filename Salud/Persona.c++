@@ -6,7 +6,7 @@ int main(){
 
 class Persona
 {
-public:
+private:
  //Declaración de Atributos->
 string tipoDoc;
 int documento;
@@ -55,12 +55,31 @@ cin>>sexo;
 }
 void mostrarPersona()
 {
-
+    cout << "Tipo documento: " << tipoDoc << endl;
+    cout << "Documento: " << documento << endl;
+    cout << "Nombre: " << nombre << endl;
+    cout << "Apellido: " << apellido << endl;
+    cout << "Peso: " << peso << endl;
+    cout << "Estatura: " << estatura << endl;
+    cout << "Edad: " << edad << endl;
+    cout << "Sexo: " << sexo << endl;
 }
 void calcularImc(){
 
 float pesoActual=(pesoActual=peso/(estatura*estatura));
 
+if (pesoActual < 20)
+    {
+        cout << "El peso esta por debajo de lo ideal" << endl;
+    }
+    else if (pesoActual >= 20 && pesoActual <= 25)
+    {
+        cout << "El peso es ideal" << endl;
+    }
+    else
+    {
+        cout << "Tiene sobrepeso" << endl;
+    }
 
 
 }
@@ -75,7 +94,6 @@ float pesoActual=(pesoActual=peso/(estatura*estatura));
 
 
 
-cout<<mostrarPersona(Persona);
 
 
 
