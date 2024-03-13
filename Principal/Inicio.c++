@@ -16,5 +16,5 @@ void inicio ::user()
 {
 Empleado user;
 user.pedirDatos();
-user.mostrarPersona(string cargo,float valorHora,float horasTrabajadas,string tipoDoc,int documento,string nombre,string apellido);
+user.mostrarPersona();
 };

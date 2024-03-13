@@ -1,8 +1,10 @@
 #include <iostream>
 #include "Persona.c++"
 using namespace std;
+
 //instancia de persona
-class empleado : public persona{
+class empleado : public persona
+{
 private:
 string cargo;
 float valorHora;
@@ -11,7 +13,8 @@ string departamento;
 Persona persona;
 };
 
-void pedirDatos(){
+void pedirDatos()
+{
 cout<<"Ingrese su Cargo: ";
 cin>>cargo;
 cout<<"Ingrese el valor de su hora laboral: ";
@@ -20,12 +23,11 @@ cout<<"Ingrese su cantidad de horas trabajadas: ";
 cin>>horasTrabajadas;
 cout<<"Ingrese el departamento al que pertenece: ";
 cin>>departamento;
-
 persona.pedirDatos();
 }
 
-float calcularHonorarios(){
-
+float calcularHonorarios()
+{
 float honorario = (valorHora*horasTrabajadas)-(((valorHora*horasTrabajadas)*0.966)/100);
 return honorario;
 }
@@ -39,7 +41,6 @@ cout << "Apellido: " << apellido << endl;
 cout << "Valor Hora: " << valorHora << endl;
 cout << "Horas Trabajadas: " << horasTrabajadas << endl;
 cout << "Valor a pagar: "<< calcularHonorarios() <<endl;
-
 }
 
 
@@ -53,5 +54,5 @@ int main(){
 
 
 
-
+return 0;
 }
